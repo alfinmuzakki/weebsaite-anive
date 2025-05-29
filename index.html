@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Anniversary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Happy Anniversary, Sayang 💖</h1>
+
+  <audio controls autoplay loop>
+    <source src="pinn.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <div class="gallery">
+    <img src="pin6.jpg" alt="Foto 1" />
+    <img src="123.jpg" alt="Foto 2" />
+    <img src="pin3.jpg" alt="Foto 3" />
+  </div>
+
+  <div class="message">
+    Terima kasih telah menjadi bagian terindah dalam hidupku. Setiap detik bersamamu adalah anugerah yang luar biasa. 
+    Semoga cinta kita selalu hangat, tumbuh, dan bertahan selamanya 💞<br><br>
+    Aku mencintaimu hari ini, esok, dan selamanya.
+  </div>
+
+  <footer>
+    &copy; 2025 - Dibuat dengan cinta 💕
+  </footer>
+
+  <!-- Hujan Hati -->
+  <div class="heart-container" id="heartContainer"></div>
+
+  <script>
+    const heartContainer = document.getElementById('heartContainer');
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+      heart.innerHTML = '💖';
+      heartContainer.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
